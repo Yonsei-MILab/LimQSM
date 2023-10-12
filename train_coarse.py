@@ -86,8 +86,7 @@ def train_generator(input, Mask, Maskmimi, label, traing_loss, iteration):
 def calculate_gen_loss(fine_pred, Mask, Maskmimi, label):
     # Recon loss
     recon_loss_L1 = gen_loss(fine_pred*(Mask), label*(Mask)) 
- 
-
+  
     # Laplacian loss
     preds = fine_pred.to(devicec)
     Maskmimis = Maskmimi.to(devicec)
