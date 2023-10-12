@@ -131,8 +131,7 @@ def train_discriminator(input, Mask, Maskmimi, label, fine_pred, traind_loss, it
 def calculate_gen_loss(fine_pred, Mask, Maskmimi, label):
     # Recon loss
     recon_loss_L1 = gen_loss(fine_pred*(Mask), label*(Mask)) 
-
-
+  
     # Laplacian loss
     preds = fine_pred.to(devicec)
     Maskmimis = Maskmimi.to(devicec)
